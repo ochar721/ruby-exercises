@@ -8,7 +8,7 @@ RSpec.describe "#map pattern" do
     expect(capitalized_names).to eq(["Alice", "Bob", "Charlie"])
   end
 
-  it "doubles" do
+  xit "doubles" do
     numbers = [1, 2, 3, 4, 5]
     doubles = []
     numbers.each do |number|
