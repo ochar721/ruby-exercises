@@ -15,31 +15,31 @@ RSpec.describe "#any" do
     expect(has_zero).to_not eq(true)
   end
 
-  it "has at least one alice" do
+  xit "has at least one alice" do
     names = ["Bill", "Bob", "Burton", "Alice", "Brandon"]
     # Your code goes here
     expect(has_alice).to eq(true)
   end
 
-  it "no alices" do
+  xit "no alices" do
     names = ["Chuck", "Charlene", "Cory", "Chris", "Carl"]
     # Your code goes here
     expect(has_alice).to_not eq(true)
   end
 
-  it "has a multi word phrase" do
+  xit "has a multi word phrase" do
     phrases = ["Sure!", "OK.", "I have no idea.", "Really?Whatever."]
     # Your code goes here
     expect(has_multi_word_phrase).to eq(true)
   end
 
-  it "no monkeys" do
+  xit "no monkeys" do
     animals = ["elephant", "hippo", "jaguar", "python"]
     # Your code goes here
     expect(has_monkeys).to_not eq(true)
   end
 
-  it "no multiples of five" do
+  xit "no multiples of five" do
     numbers = [3, 1, 3, 2, 4, 9, 8]
     # Your code goes here
     expect(multiples_of_5).to_not eq(true)

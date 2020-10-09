@@ -13,4 +13,4 @@ RSpec.describe "Basic Enums" do
     # write code here
     expect(sum).to eq(15)
   end
-end 
+end

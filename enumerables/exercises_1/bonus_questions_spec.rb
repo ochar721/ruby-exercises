@@ -1,13 +1,10 @@
-gem 'minitest'
-require 'minitest/autorun'
-require 'minitest/pride'
 require_relative 'objects/thing'
 require_relative 'objects/unicorn'
 require_relative 'objects/gnome'
 require_relative 'objects/squid'
 
-class BonusQuestionsTest < Minitest::Test
-  def test_7_factorial
+RSpec.describe "Bonus Questions" do
+  it "7 factorial" do
     # Example: "Five factorial", written 5!, is
     # 1 * 2 * 3 * 4 * 5
     product = 1
@@ -15,11 +12,10 @@ class BonusQuestionsTest < Minitest::Test
     numbers.each do |number|
       # write code here
     end
-    assert_equal 5040, product
+    expect(product).to eq(5040)
   end
 
-  def test_first_roving_gnome
-    skip
+  xit "first roving gnome" do
     gnome1 = Gnome.new('forest')
     gnome2 = Gnome.new('roving')
     gnome3 = Gnome.new('snorkeling')
@@ -30,19 +26,17 @@ class BonusQuestionsTest < Minitest::Test
 
     # write code here
 
-    assert_equal gnome2, found
+    expect(found).to eq(gnome2)
   end
 
-  def test_sum_of_factorials
-    skip
+  xit "sum of factorials" do
     sum_of_factorials = 0
     numbers = [1, 2, 3, 4, 5]
     # write code here
-    assert_equal 153, sum_of_factorials
+    expect(sum_of_factorials).to eq(153)
   end
 
-  def test_first_giant_squid
-    skip
+  xit "first giant squid" do
     squid1 = Squid.new('tiny')
     squid2 = Squid.new('inky')
     squid3 = Squid.new('giant')
@@ -53,19 +47,17 @@ class BonusQuestionsTest < Minitest::Test
 
     # write code here
 
-    assert_equal squid3, found
+    expect(found).to eq(squid3)
   end
 
-  def test_max_value
-    skip
+  xit "max value" do
     max_num = 0
     numbers = [2, 16, 6, 50, 12]
     # write code here
-    assert_equal 50, max_num
+    expect(max_num).to eq(50)
   end
 
-  def test_first_weird_thing_using_find
-    skip
+  xit "first weird thing using find" do
     thing1 = Thing.new('odd')
     thing2 = Thing.new('cool')
     thing3 = Thing.new('weird')
@@ -76,11 +68,10 @@ class BonusQuestionsTest < Minitest::Test
 
     # write code here
 
-    assert_equal thing3, found
+    expect(found).to eq(thing3)
   end
 
-  def test_first_pink_unicorn
-    skip
+  xit "first pink unicorn" do
     unicorn1 = Unicorn.new('white')
     unicorn2 = Unicorn.new('sparkly')
     unicorn3 = Unicorn.new('purple')
@@ -91,6 +82,6 @@ class BonusQuestionsTest < Minitest::Test
 
     # write code here
 
-    assert_equal unicorn4, found
+    expect(found).to eq(unicorn4)
   end
 end

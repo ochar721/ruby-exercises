@@ -7,7 +7,7 @@ RSpec.describe "#all" do
     expect(all_zeros).to eq(true)
   end
 
-  xit "not all zeros" do
+  it "not all zeros" do
     numbers = [0, 0, 0, 0, 1, 0, 0, 0]
     all_zeros = numbers.all? do |number|
       # Your code goes here
