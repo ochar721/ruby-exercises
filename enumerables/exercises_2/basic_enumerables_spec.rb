@@ -1,63 +1,53 @@
-require 'minitest/autorun'
-require 'minitest/pride'
-
-class EnumerablesOneTest < Minitest::Test
-  def test_squares
+RSpec.describe "Basic Enumerables" do
+  it "squares" do
     numbers = [1, 2, 3, 4, 5]
     actual = numbers.map do |number|
       number ** 2
     end
-    assert_equal [1, 4, 9, 16, 25], actual
+    expect(actual).to eq([1, 4, 9, 16, 25])
   end
 
-  def test_find_waldo
-    skip
+  xit "find waldo" do
     words = ["noise", "dog", "fair", "house", "waldo", "bucket", "fish"]
     actual = words.find do |word|
       # Your Code Here
     end
-    assert_equal "waldo", actual
+    expect(actual).to eq("waldo")
   end
 
-  def test_pick_words_with_three_letters
-    skip
+  xit "pick words with three letters" do
     words = ["pill", "bad", "finger", "cat", "blue", "dog", "table", "red"]
     actual = # Your Code Here
-    assert_equal ["bad", "cat", "dog", "red"], actual
+    expect(actual).to eq(["bad", "cat", "dog", "red"])
   end
 
-  def test_normalize_zip_codes
-    skip
+  xit "normalize zip codes" do
     numbers = [234, 10, 9119, 38881]
     # Your Code Here
-    assert_equal ["00234", "00010", "09119", "38881"], actual
+    expect(actual).to eq(["00234", "00010", "09119", "38881"])
   end
 
-  def test_no_waldo
-    skip
+  xit "no waldo" do
     words = ["scarf", "sandcastle", "flag", "pretzel", "crow", "key"]
     # Your Code Here
-    assert_nil found
+    expect(found).to eq(nil)
   end
 
-  def test_pick_floats
-    skip
+  xit "pick floats" do
     numbers = [3, 1.4, 3.5, 2, 4.9, 9.1, 8.0]
     # Your Code Here
-    assert_equal [1.4, 3.5, 4.9, 9.1, 8.0], actual
+    expect(actual).to eq([1.4, 3.5, 4.9, 9.1, 8.0])
   end
 
-  def test_pick_dinosaurs
-    skip
+  xit "pick dinosaurs" do
     animals = ["tyrannosaurus", "narwhal", "eel", "achillesaurus", "qingxiusaurus"]
     actual = # Your code goes here
-    assert_equal ["tyrannosaurus", "achillesaurus", "qingxiusaurus"], actual
+    expect(actual).to eq(["tyrannosaurus", "achillesaurus", "qingxiusaurus"])
   end
 
-  def test_words_with_no_vowels
-    skip
+  xit "words with no vowels" do
     words = ["green", "sheep", "travel", "least", "boat"]
     # Your Code Here
-    assert_equal ["grn", "shp", "trvl", "lst", "bt"], actual
+    expect(actual).to eq(["grn", "shp", "trvl", "lst", "bt"])
   end
 end

@@ -1,6 +1,6 @@
 These are a delightful collection of exercises that will give you an opportunity to flex your enumerable skills.
 
-The `all_enumerable-exercises_test.rb` file will require you to use _every_ enumerable listed in the `exercises_1` directory.
+The `all_enumerable_exercises_spec.rb` file will require you to use _every_ enumerable listed in the `exercises_1` directory.
 
 It is a masterclass on iteration and enumerables in Ruby.
 
