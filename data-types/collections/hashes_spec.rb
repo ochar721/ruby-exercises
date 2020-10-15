@@ -1,60 +1,55 @@
-
-
-require 'minitest/autorun'
-require 'minitest/pride'
-
-class HashesTest < Minitest::Test
-
-  def test_1
+RSpec.describe "Hashes" do
+  xit "test 1" do
     # In the line below, create a new empty hash called empty
     empty = ______
-    assert_equal ({}), empty
+    expect(empty).to eq({})
   end
 
-  def test_2
+  xit "test 2" do
     # In the line below, create an empty hash with a default value 0
     empty = ______
-    assert_equal 0, empty[:not_found]
+    expect(empty).to eq({})
+    expect(empty[:not_found]).to eq(0)
   end
 
-  def test_3
+  xit "test 3" do
     # In the line below, create a hash called ages. The hash should
     # have a key of "ben" with a value of 4 and a key of "kelly" with
     # a value of 6
     ages = ______
-    assert_equal 2, ages.length
-    assert_equal 4, ages["ben"]
-    assert_equal 6, ages["kelly"]
+    expect(ages.length).to eq(2)
+    expect(ages["ben"]).to eq(4)
+    expect(ages["kelly"]).to eq(6)
   end
 
-  def test_4
+  xit "test 4" do
     # In the line below, create a hash called ages. The hash should
     # have a key of :ben with a value of 4 and a key of :kelly with
     # a value of 6.
     ages = ______
-    assert_equal 2, ages.length
-    assert_equal 4, ages[:ben]
-    assert_equal 6, ages[:kelly]
+    expect(ages.length).to eq(2)
+    expect(ages[:ben]).to eq(4)
+    expect(ages[:kelly]).to eq(6)
 
     # There are two different syntaxes for doing this. Use the other way to
     # achieve the same result
     ages = ______
-    assert_equal 2, ages.length
-    assert_equal 4, ages[:ben]
-    assert_equal 6, ages[:kelly]
+    expect(ages.length).to eq(2)
+    expect(ages[:ben]).to eq(4)
+    expect(ages[:kelly]).to eq(6)
   end
 
-  def test_5
+  xit "test 5" do
     # In the line below, create a new hash with
     # default values of zero
     # create a "tomatoes" key and a :carrots key
     ingredients = ______
 
-    assert_equal 0, ingredients["tomatoes"]
-    assert_equal 0, ingredients[:carrots]
+    expect(ingredients["tomatoes"]).to eq(0)
+    expect(ingredients[:carrots]).to eq(0)
   end
 
-  def test_6
+  xit "test 6" do
     books = {
       "John Steinbeck" => "Grapes of Wrath",
       "Harper Lee" => "To Kill a Mockingbird"
@@ -62,10 +57,10 @@ class HashesTest < Minitest::Test
     # Using the books hash defined above,
     # access the value "Grapes of Wrath"  in the line below
     grapes = ______
-    assert_equal "Grapes of Wrath", grapes
+    expect(grapes).to eq("Grapes of Wrath")
   end
 
-  def test_7
+  xit "test 7" do
     books = {
       "John Steinbeck" => "Grapes of Wrath",
       "Harper Lee" => "To Kill a Mockingbird"
@@ -80,10 +75,10 @@ class HashesTest < Minitest::Test
       "Harper Lee" => "To Kill a Mockingbird",
       "Ernest Hemmingway" => "For Whom the Bell Tolls"
     }
-    assert_equal expected, books
+    expect(books).to eq(expected)
   end
 
-  def test_8
+  xit "test 8" do
     books = {
       "John Steinbeck" => "Grapes of Wrath",
       "Harper Lee" => "To Kill a Mockingbird"
@@ -96,10 +91,10 @@ class HashesTest < Minitest::Test
       "John Steinbeck" => "Of Mice and Men",
       "Harper Lee" => "To Kill a Mockingbird"
     }
-    assert_equal expected, books
+    expect(books).to eq(expected)
   end
 
-  def test_9
+  xit "test 9" do
     books = {
       "John Steinbeck" => "Grapes of Wrath",
       "Harper Lee" => "To Kill a Mockingbird"
@@ -110,10 +105,10 @@ class HashesTest < Minitest::Test
     expected = {
       "John Steinbeck" => "Grapes of Wrath"
     }
-    assert_equal expected, books
+    expect(books).to eq(expected)
   end
 
-  def test_10
+  xit "test 10" do
     books = {
       John_Steinbeck: "Grapes of Wrath",
       Harper_Lee: "To Kill a Mockingbird"
@@ -121,10 +116,10 @@ class HashesTest < Minitest::Test
     # Using the books hash defined above,
     # access the value "Grapes of Wrath"  in the line below
     grapes = ______
-    assert_equal "Grapes of Wrath", grapes
+    expect(grapes).to eq("Grapes of Wrath")
   end
 
-  def test_11
+  xit "test 11" do
     books = {
       John_Steinbeck: "Grapes of Wrath",
       Harper_Lee: "To Kill a Mockingbird"
@@ -139,10 +134,10 @@ class HashesTest < Minitest::Test
       Harper_Lee: "To Kill a Mockingbird",
       Ernest_Hemmingway: "For Whom the Bell Tolls"
     }
-    assert_equal expected, books
+    expect(books).to eq(expected)
   end
 
-  def test_12
+  xit "test 12" do
     books = {
       John_Steinbeck: "Grapes of Wrath",
       Harper_Lee: "To Kill a Mockingbird"
@@ -155,10 +150,10 @@ class HashesTest < Minitest::Test
       John_Steinbeck: "Of Mice and Men",
       Harper_Lee: "To Kill a Mockingbird"
     }
-    assert_equal expected, books
+    expect(books).to eq(expected)
   end
 
-  def test_13
+  xit "test 13" do
     books = {
       John_Steinbeck: "Grapes of Wrath",
       Harper_Lee: "To Kill a Mockingbird"
@@ -169,10 +164,10 @@ class HashesTest < Minitest::Test
     expected = {
       John_Steinbeck: "Grapes of Wrath"
     }
-    assert_equal expected, books
+    expect(books).to eq(expected)
   end
 
-  def test_14
+  xit "test 14" do
     ages = {
       "Jimmy" => 4,
       "Julio" => 8,
@@ -181,10 +176,10 @@ class HashesTest < Minitest::Test
     # Using the ages hash defined above
     # increment Julio's age by one
     ______
-    assert_equal 9, ages["Julio"]
+    expect(ages["Julio"]).to eq(9)
   end
 
-  def test_15
+  xit "test 15" do
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -193,10 +188,10 @@ class HashesTest < Minitest::Test
     # Using the ages hash defined above
     # increment Julio's age by one
     ______
-    assert_equal 9, ages[:Julio]
+    expect(ages[:Julio]).to eq(9)
   end
 
-  def test_16
+  xit "test 16" do
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -205,10 +200,10 @@ class HashesTest < Minitest::Test
     # Using the ages hash defined above
     # get an array of all the names
     names = ______
-    assert_equal [:Jimmy, :Julio, :Juliet], names
+    expect(names).to eq([:Jimmy, :Julio, :Juliet])
   end
 
-  def test_17
+  xit "test 17" do
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -217,10 +212,10 @@ class HashesTest < Minitest::Test
     # Using the ages hash defined above
     # get an array of all the ages
     age_list = ______
-    assert_equal [4, 8, 9], age_list
+    expect(age_list).to eq([4, 8, 9])
   end
 
-  def test_18
+  xit "test 18" do
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -229,10 +224,10 @@ class HashesTest < Minitest::Test
     # Using the ages hash defined above
     # find the number of key/value pairs
     num_pairs = ______
-    assert_equal 3, num_pairs
+    expect(num_pairs).to eq(3)
   end
 
-  def test_19
+  xit "test 19" do
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -241,15 +236,15 @@ class HashesTest < Minitest::Test
     # Call a method on the ages hash defined above
     # to figure out if :Jimmy is a key
     jimmy_in_hash = ______
-    assert_equal true, jimmy_in_hash
+    expect(jimmy_in_hash).to eq(true)
 
     # Now figure out if :Jackie is in the hash
 
     jackie_in_hash = ______
-    assert_equal false, jackie_in_hash
+    expect(jackie_in_hash).to eq(false)
   end
 
-  def test_20
+  xit "test 20" do
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -263,6 +258,6 @@ class HashesTest < Minitest::Test
       8 => :Julio,
       9 => :Juliet
     }
-    assert_equal expected, opposite
+    expect(opposite).to eq(expected)
   end
 end

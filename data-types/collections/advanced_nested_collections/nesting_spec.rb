@@ -1,6 +1,4 @@
-require './nesting'
-require 'minitest/autorun'
-require 'minitest/pride'
+require_relative './nesting'
 
 # The intent of this exercise is to practice working with nested collections.
 # Some tests will be able to pass without any enumeration, and others will require
@@ -13,111 +11,102 @@ require 'minitest/pride'
 # The collection you're going to be using lives in ./nesting.rb and is called stores.
 # If you spot an error or want to make this exercise better, please let us know!
 
-class NestedTest < MiniTest::Test
-
-  def test_list_of_olive_garden_employess
-    skip
+RSpec.describe "Advanced nested collection" do
+  xit "list of olive garden employess" do
     #^^^ Un-Skip each test
     #=======================
     # EXAMPLE
     employees = stores[:olive_garden][:employees]
     #=======================
-    assert_equal ["Jeff", "Zach", "Samantha"], employees
+    expect(employees).to eq(["Jeff", "Zach", "Samantha"])
   end
 
-  def test_pancake_ingredients
-    skip
+  xit "pancake ingredients" do
     #=======================
     # pancake_ingredients = <your code here>
     #=======================
-    assert_equal ["Flour", "Eggs", "Milk", "Syrup"], pancake_ingredients
+    expect(pancake_ingredients).to eq(["Flour", "Eggs", "Milk", "Syrup"])
   end
 
-  def test_rissotto_price
-    skip
+  xit "rissotto price" do
     #=======================
     # risotto_price = <your code here>
     #=======================
-    assert_equal 12, risotto_price
+    expect(risotto_price).to eq(12)
   end
 
-  def test_big_mac_ingredients
-    skip
+  xit "big mac ingredients" do
     #=======================
     # big_mac_ingredients = <your code here>
     #=======================
-    assert_equal ['Bun','Hamburger','Ketchup','pickles'], big_mac_ingredients
+    expect(big_mac_ingredients).to eq(['Bun','Hamburger','Ketchup','pickles'])
   end
 
-  def test_list_of_restaurants
-    skip
+  xit "list of restaurants" do
     #=======================
     # store_names = <your code here>
     #=======================
-    assert_equal [:olive_garden, :dennys, :macdonalds], store_names
+    expect(store_names).to eq([:olive_garden, :dennys, :macdonalds])
   end
 
-  def test_list_of_dishes_names_for_olive_garden
-    skip
+  xit "list of dishes names for olive garden" do
     #=======================
     # dishes_names = <your code here>
     #=======================
-    assert_equal ['Risotto', 'Steak'], dishes_names
+    expect(dish_names).to eq(['Risotto', 'Steak'])
   end
 
-  def test_list_of_employees_across_all_restaurants
-    skip
+  xit "list of employees across all restaurants" do
     #=======================
     # employee_names = <your code here>
     #=======================
-    assert_equal ["Jeff","Zach","Samantha","Bob","Sue","James","Alvin","Simon","Theodore"], employee_names
+    expect(employee_names).to eq(["Jeff","Zach","Samantha","Bob","Sue","James","Alvin","Simon","Theodore"])
   end
 
-  def test_list_of_all_ingredients_across_all_restaurants
-    skip
+  xit "list of all ingredients across all restaurants" do
     #=======================
     # ingredients = <your code here>
     #=======================
-    assert_equal ["Rice",
-                  "Cheese",
-                  "Butter",
-                  "Beef",
-                  "Garlic",
-                  "Flour",
-                  "Eggs",
-                  "Milk",
-                  "Syrup",
-                  "Flour",
-                  "Eggs",
-                  "Syrup",
-                  "Bun",
-                  "Hamburger",
-                  "Ketchup",
-                  "pickles",
-                  "Potatoes",
-                  "Salt"], ingredients
+    expected = [
+      "Rice",
+      "Cheese",
+      "Butter",
+      "Beef",
+      "Garlic",
+      "Flour",
+      "Eggs",
+      "Milk",
+      "Syrup",
+      "Flour",
+      "Eggs",
+      "Syrup",
+      "Bun",
+      "Hamburger",
+      "Ketchup",
+      "pickles",
+      "Potatoes",
+      "Salt"
+    ]
+    expect(ingredients).to eq(expected)
   end
 
-  def test_full_menu_price_for_olive_garden
-    skip
+  xit "full menu price for olive garden" do
     #=======================
     # full_menu_price = <your code here>
     #=======================
-    assert_equal 27, full_menu_price
+    expect(full_menu_price).to eq(27)
   end
 
-  def test_full_menu_for_olive_garden
-    skip
+  xit "full menu for olive garden" do
     #=======================
     # olive_garden_menu = <your code here>
     #=======================
     expected = ({"Risotto"=>{:name=>"Risotto", :ingredients=>["Rice", "Cheese", "Butter"], :price=>12},
                   "Steak"=>{:name=>"Steak", :ingredients=>["Beef", "Garlic"], :price=>15}})
-    assert_equal expected, olive_garden_menu
+    expect(olive_garden_menu).to eq(expected)
   end
 
-  def test_menu_accross_all_restaurants
-     skip
+  xit "menu accross all restaurants" do
     #=======================
     #  full_menu = <your code here>
     #=======================
@@ -138,7 +127,6 @@ class NestedTest < MiniTest::Test
                 "Fries"=>
                     {:name=>"Fries", :ingredients=>["Potatoes", "Salt"], :price=>2}
                   })
-    assert_equal expected, full_menu
+    expect(full_menu).to eq(expected)
   end
-
 end

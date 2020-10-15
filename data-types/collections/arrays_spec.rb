@@ -1,198 +1,175 @@
-require 'minitest/autorun'
-require 'minitest/pride'
-
-class ArraysTest < Minitest::Test
-  def test_0
-    skip
+RSpec.describe "Arrays" do
+  xit "test 1" do
     # In the line below, create a new empty array
     empty = ______
-    assert_equal [], empty
+    expect(empty).to eq([])
   end
 
-  def test_1
-    skip
+  xit "test 2" do
     # In the line below, create and array with the numbers 1 - 5
     nums = ______
-    assert_equal [1,2,3,4,5], nums
+    expect(nums).to eq([1,2,3,4,5])
   end
 
-  def test_2
-    skip
+  xit "test 3" do
     nums = [1,2,3]
     # In the line below, call a method on the nums variable
     # defined above to access the second element
     actual = nums.______
     expected = 2
-    assert_equal expected, actual
+    expect(actual).to eq(expected)
   end
 
-  def test_22
-    skip
+  xit "test 4" do
     # In the line below, call a method on the nums variable
     # defined above to access the last element
     nums = [1,2,3]
     actual = nums
     expected = 3
-    assert_equal expected, actual
+    expect(actual).to eq(expected)
 
     # Now try to find another way to achieve the same effect
     nums = [1,2,3]
     actual = nums
     expected = 3
-    assert_equal expected, actual
+    expect(actual).to eq(expected)
   end
 
-  def test_3
-    skip
+  xit "test 5" do
     hummus = ["tahini", "chickpeas", "lemons"]
     # Call a method on the hummus variable that will
     # tell us how many elements there are in the array
     assert_equal 3, hummus._____
   end
 
-  def test_4
-    skip
+  xit "test 6" do
     world_cup = ["Germany", "Mexico", "Iceland", "Portugal"]
     # In the line below, add the element "Brazil" to the end of the world_cup array
 
-    assert_equal "Brazil", world_cup.last
+    expect(world_cup.last).to eq("Brazil")
 
     # Use a different method to add the element "Japan" to the end of the array
 
-    assert_equal "Japan", world_cup.last
+    expect(world_cup.last).to eq("Japan")
   end
 
-  def test_a
-    skip
+  xit "test 7" do
     world_cup = ["Germany", "Mexico", "Iceland", "Portugal"]
     # Call a method on the world_cup variable to remove and return
     # the last element of the array
     last_element = world_cup
-    assert_equal "Portugal", last_element
-    assert_equal ["Germany", "Mexico", "Iceland"], world_cup
+    expect(last_element).to eq("Portugal")
+    expect(world_cup).to eq(["Germany", "Mexico", "Iceland"])
   end
 
-  def test_5
-    skip
+  xit "test 8" do
     karaoke = ["Shake it Off", "Dancing Queen", "Bohemian Rhapsody"]
     # Call a method on the karaoke variable to ask whether "Toxic"
     # is an element or not
     toxic_in_array = karaoke
-    assert_equal false, toxic_in_array
+    expect(toxic_in_array).to eq(false)
 
     # Now call a method on the karaoke variable to ask whether "Dancing Queen"
     # is an element or not
     dancing_queen_in_array = karaoke
-    assert_equal true, dancing_queen_in_array
+    expect(actual).to eq(true)
   end
 
-  def test_b
-    skip
+  xit "test 9" do
     band = ["Guitar", "Drums", "Bass"]
     # Call a method on the band variable to add the element "Vocals"
     # to the beginning of the array
 
-    assert_equal ["Vocals", "Guitar", "Drums", "Bass"], band
+    expect(band).to eq(["Vocals", "Guitar", "Drums", "Bass"])
   end
 
-  def test_c
-    skip
+  xit "test 10" do
     garden = ["Tulips", "Tomatoes", "Basil", "Peppers"]
     # Call a method to remove and return the first element from the garden array
     first_element = garden
-    assert_equal ["Tomatoes", "Basil", "Peppers"], garden
-    assert_equal "Tulips", first_element
+    expect(garden).to eq(["Tomatoes", "Basil", "Peppers"])
+    expect(first_element).to eq("Tulips")
   end
 
-  def test_6
-    skip
+  xit "test 11" do
     teams = ["Rockies", "Avalanche", "Nuggets", "Broncos", "Rapids"]
     # Call a method on the teams variable to get the second, third, and fourth teams
     some_teams = teams
-    assert_equal ["Avalanche", "Nuggets", "Broncos"], some_teams
+    expect(some_teams).to eq(["Avalanche", "Nuggets", "Broncos"])
 
     # Now use a different method on the teams variable to get the first and second teams
     some_teams = teams
-    assert_equal ["Rockies", "Avalanche"], some_teams
+    expect(some_teams).to eq(["Rockies", "Avalanche"])
   end
 
-  def test_7
-    skip
+  xit "test 12" do
     fourteeners = ["Pikes Peak", nil, "Mount Elbert", nil, "Mount Evans"]
     # Call a method on the fourteeners variable to remove the nils
     fourteeners = fourteeners
-    assert_equal ["Pikes Peak", "Mount Elbert", "Mount Evans"], fourteeners
+    expect(fourteeners).to eq(["Pikes Peak", "Mount Elbert", "Mount Evans"])
   end
 
-  def test_8
-    skip
+  xit "test 13" do
     pokemon = [["Squirtle", "Charmander", "Bulbasaur"], ["Pikachu"], "Staryu"]
     # Call a method on the pokemon variable to remove the nesting
     pokemon = pokemon
-    assert_equal ["Squirtle", "Charmander", "Bulbasaur", "Pikachu", "Staryu"], pokemon
+    expect(pokemon).to eq(["Squirtle", "Charmander", "Bulbasaur", "Pikachu", "Staryu"])
   end
 
-  def test_9
-    skip
+  xit "test 14" do
     scores = [23, 56, 34, 29, 48]
     # Call a method on the scores variables that will
     # move the elements two spots to the left
     new_scores = scores
-    assert_equal [34, 29, 48, 23, 56], new_scores
+    expect(new_scores).to eq([34, 29, 48, 23, 56])
 
     # Now call a method on the scores variables that will
     # move the elements one spot to the right
     new_scores = scores
-    assert_equal [48, 23, 56, 34, 29], new_scores
+    expect(new_scores).to eq([48, 23, 56, 34, 29])
   end
 
-  def test_10
-    skip
+  xit "test 15" do
     vowels = ["a", "e", "y", "i", "o", "u", "y"]
     # Call a method on the vowels variable to remove "y"
 
-    assert_equal ["a", "e", "i", "o", "u"], vowels
+    expect(vowels).to eq(["a", "e", "i", "o", "u"])
   end
 
-  def test_11
-    skip
+  xit "test 16" do
     furniture = ["couch", "bed", "table"]
     # Call a method on the furniture variable to add the element
     # "dresser" in between the elements "couch" and "bed"
     new_furniture = furniture
-    assert_equal ["couch", "dresser", "bed", "table"], new_furniture
+    expect(new_furniture).to eq(["couch", "dresser", "bed", "table"])
   end
 
-  def test_12
-    skip
+  xit "test 17" do
     children = ["Sarah", "Owen", "Peter"]
     # Call a method on the children variable to combine them into
     # one string like this: "Sarah, Owen, Peter"
     one_string = children
-    assert_equal "Sarah, Owen, Peter", one_string
+    expect(one_string).to eq("Sarah, Owen, Peter")
   end
 
-  def test_13
-    skip
+  xit "test 18" do
     ascending = [1,2,3,4,5]
     # Call a method on the ascending variable to create an array
     # with the elements in the opposite order
     descending = ascending
-    assert_equal [5,4,3,2,1], descending
+    expect(descending).to eq([5,4,3,2,1])
   end
 
-  def test_14
-    skip
+  xit "test 19" do
     dice = [1,2,3,4,5,6]
     # Call a method on the dice variable to get a random element out
     # of the array
     roll = dice
-    assert roll <= 6
-    assert roll >= 1
+    expect(roll).to be <= 6
+    expect(roll).to be >= 1
     # Note, this assertion assumes the Ruby Version is 2.4 or higher.
     # This test will fail with expecting roll to be a FixNum if the
     # Ruby version is 2.3 or earlier
-    assert_instance_of Integer, roll
+    expect(roll).to be_instance_of(Integer)
   end
-
 end
