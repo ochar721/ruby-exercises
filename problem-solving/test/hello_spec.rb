@@ -1,24 +1,22 @@
-require_relative "test_helper"
 require "./lib/hello"
 
-class HelloTest < Minitest::Test
-
-  def test_it_says_hello_to_brian
+RSpec.describe Hello do
+  it "says hello to brian" do
     hello = Hello.new
 
     result = hello.greet("Brian")
     expected = "Hello, Brian, nice to meet you!"
 
-    assert_equal expected, result
+    expect(result).to eq(expected)
   end
 
-  def test_it_says_hello_to_jeff
+  it "says hello to jeff" do
     hello = Hello.new
 
     result = hello.greet("Jeff")
     expected = "Hello, Jeff, nice to meet you!"
 
-    assert_equal expected, result
+    expect(result).to eq(expected)
   end
 
 end

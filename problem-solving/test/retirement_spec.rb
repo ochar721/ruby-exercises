@@ -1,36 +1,34 @@
-require_relative "test_helper"
 require "./lib/retirement"
 
-class RetirementTest < Minitest::Test
-
-  def test_it_tells_me_when_i_should_retire
+RSpec.describe Retirement do
+  it "tells me when I should retire" do
     retire = Retirement.new
 
     result = retire.calculate(25, 65)
     expected = "You have 40 years left until you can retire. It is 2015, so you can retire in 2055."
 
-    assert_equal expected, result
+    expect(result).to eq(expected)
   end
 
-  def test_it_tells_me_when_i_should_retire_with_different_ages
+  it "tells me when I should retire with different ages" do
     retire = Retirement.new
 
     result = retire.calculate(39, 70)
     expected = "You have 31 years left until you can retire. It is 2015, so you can retire in 2046."
 
-    assert_equal expected, result
+    expect(result).to eq(expected)
   end
 
-  def test_it_errors_when_given_a_negative_age
+  it "errors when given a negative age" do
     retire = Retirement.new
 
     result = retire.calculate(-25, 65)
     expected = "Error. Age cannot be negative."
 
-    assert_equal expected, result
+    expect(result).to eq(expected)
   end
 
-  def test_it_errors_when_retirement_age_is_negative
+  it "errors when retirement age is negative" do
     # write your test here
   end
 end
