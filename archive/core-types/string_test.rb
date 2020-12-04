@@ -5,8 +5,8 @@ require 'minitest/pride'
 
 class StringTest < Minitest::Test
   def test_capitalize
-    assert_equal __, "alice".capitalize
-    assert_equal __, "alice smith".capitalize
+    assert_equal "Alice", "alice".capitalize
+    assert_equal "Alice Smith", "alice smith".capitalize!
   end
 
   def test_upcase
